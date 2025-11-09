@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infusio PK - Your Happy Place</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root { --gold: #D4AF37; --deep: #1C1C1C; --cream: #F7F4F0; }
+    body { background: var(--cream); color: var(--deep); font-family: 'Georgia', serif; }
+    .gold { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
+    .bg-deep { background-color: var(--deep); color: var(--cream); }
+    .parallax { background-attachment: fixed; background-position: center; background-size: cover; }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95); z-index: 9999; display: flex;
+      align-items: center; justify-content: center; opacity: 0; visibility: hidden;
+      transition: 0.4s;
+    }
+    #lightbox.show { opacity: 1; visibility: visible; }
+    #lightbox img {
+      max-width: 95vw; max-height: 95vh;
+      border: 15px solid var(--gold);
+      border-radius: 30px;
+      box-shadow: 0 0 120px rgba(212,175,55,1);
+    }
+    .close-btn {
+      position: absolute; top: 20px; right: 30px;
+      font-size: 80px; color: white; cursor: pointer; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-deep backdrop-blur-xl z-50 border-b-4 border-gold">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">
+        Infusio PK
+      </h1>
+      <div class="flex gap-12 text-2xl font-medium">
+        <a href="#home" class="text-cream hover:text-gold transition">Home</a>
+        <a href="#about" class="text-cream hover:text-gold transition">About</a>
+        <a href="#menu" class="text-cream hover:text-gold transition">Menu</a>
+        <a href="#contact" class="text-cream hover:text-gold transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen flex items-center justify-center parallax" style="background-image: url('https://images.unsplash.com/photo-1517248135467-2c7ed3da9bd0?q=80&w=2070&auto=format&fit=crop');">
+    <div class="text-center">
+      <h1 class="text-9xl font-bold text-white drop-shadow-2xl mb-6">INFUSIO PK</h1>
+      <p class="text-6xl text-gold font-light tracking-wider mb-12">
+        more than a restaurant, your happy place.
+      </p>
+      <a href="#menu" class="inline-block bg-gold text-deep px-20 py-8 rounded-full text-4xl font-bold hover:bg-yellow-400 transition transform hover:scale-110 shadow-2xl">
+        SEE FULL MENU
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-40 bg-deep">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-8xl font-bold mb-24 bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">
+        About Us
+      </h2>
+      <div class="grid md:grid-cols-3 gap-16 mb-32">
+        <div class="bg-cream/10 p-12 rounded-3xl border-4 border-gold">
+          <i class="fas fa-mug-hot text-9xl gold mb-6"></i>
+          <h3 class="text-4xl font-bold mb-4">Café</h3>
+          <p class="text-2xl">Artisanal coffee & fresh pastries</p>
+        </div>
+        <div class="bg-cream/10 p-12 rounded-3xl border-4 border-gold">
+          <i class="fas fa-cocktail text-9xl gold mb-6"></i>
+          <h3 class="text-4xl font-bold mb-4">Bar</h3>
+          <p class="text-2xl">Signature drinks, luxury vibes</p>
+        </div>
+        <div class="bg-cream/10 p-12 rounded-3xl border-4 border-gold">
+          <i class="fas fa-gamepad text-9xl gold mb-6"></i>
+          <h3 class="text-4xl font-bold mb-4">PlayTopia</h3>
+          <p class="text-2xl">PS5, board games, endless fun</p>
+        </div>
+      </div>
+      <div class="p-24 bg-gradient-to-r from-gold to-yellow-600 rounded-3xl shadow-2xl">
+        <blockquote class="text-7xl font-bold italic text-deep">
+          “More than a restaurant — it's your happy place!”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+ <!-- Menu -->
+<section id="menu" class="py-40 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-9xl font-bold text-center mb-10 bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">
+      Our Menu
+    </h2>
+    <p class="text-center text-3xl mb-20">Click any page → Opens full PDF in browser</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Menu PDF Link -->
+      <a href="https://drive.google.com/file/d/1sgukSXZrNghsPXrA45gBaYF0x7CmaC6Z/preview" target="_blank" class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500 block">
+        <img src="https://i.imgur.com/your-page1-thumb.jpg" alt="Menu Preview" class="w-full">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+          <p class="text-white text-3xl font-bold text-center">Full Menu PDF</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-40 bg-deep">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-8xl font-bold mb-16 text-center bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">
+        Gallery
+      </h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNgqtQf8g1nX1VahdDPRWPUaEamQrPN1VI8ep5X=s680-w680-h510-rw" alt="Gallery 1" class="w-full h-72 object-cover rounded-3xl shadow-lg cursor-zoom-in" onclick="openLightbox(this.src)">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPd_-kBqcWaNIo-JsOoL2npwe1aprHjsflVLL9J=s680-w680-h510-rw" alt="Gallery 2" class="w-full h-72 object-cover rounded-3xl shadow-lg cursor-zoom-in" onclick="openLightbox(this.src)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxFYEOCJ_Ti_-z8E6NQjXlU7WsCiVj01-_IrsviL_RM_7SiFfZDS6BZ228Pai9xpJoxYZ4bdiFOoQRVKDO3RUMKlQHhrACOasyMBwRIn6Pwa3xYYLAMEBQaduuCebzYhKrq0JjhcD7AxFY=s680-w680-h510-rw" alt="Gallery 3" class="w-full h-72 object-cover rounded-3xl shadow-lg cursor-zoom-in" onclick="openLightbox(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-40 bg-cream">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-9xl font-bold text-center mb-20 bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">
+        Contact
+      </h2>
+      <div class="grid md:grid-cols-2 gap-20">
+        <div class="text-deep">
+          <h3 class="text-5xl font-bold mb-10">Call or DM</h3>
+          <p class="text-3xl mb-6">0333-INFUSIO (4638746)</p>
+          <p class="text-3xl mb-12">0622887171</p>
+          <a href="https://instagram.com/infusio_pk" target="_blank" class="inline-block">
+            <i class="fab fa-instagram text-9xl gold hover:text-yellow-400 transition transform hover:scale-110"></i>
+          </a>
+        </div>
+        <form id="contactForm" class="space-y-8">
+  <input type="text" name="name" placeholder="Name" required class="...">
+  <input type="email" name="email" placeholder="Email" required class="...">
+  <textarea name="message" rows="6" placeholder="Message" required class="..."></textarea>
+  <button type="submit" class="...">SEND MESSAGE</button>
+</form>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch("YOUR_WEB_APP_URL_HERE", {
+      method: "POST",
+      body: data
+    });
+    const result = await response.json();
+    if(result.result === "success"){
+      alert("Message sent! Thank you 😊");
+      form.reset();
+    } else {
+      alert("Oops! Something went wrong. Try again.");
+      console.error(result.error);
+    }
+  });
+</script>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-deep py-16 text-center text-cream text-2xl border-t-4 border-gold">
+    © 2025 Infusio PK - Café Bar PlayTopia
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if(e) e.stopPropagation();
+      document.getElementById('lightbox').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
